@@ -1,5 +1,5 @@
 blockquote {
-  position: sticky;
+ 	position: sticky;
 	top: -5em;
 	background: #2aa2ff;
 	padding: 0.5em 5em;
@@ -9,7 +9,7 @@ blockquote {
 	transition: all 0.2s ease-in-out;
 };
 blockquote:hover {
-  top: 0;
+ 	top: 0;
 	box-shadow: 0px 10px 10px #11111155;
 };
 blockquote a:hover {
