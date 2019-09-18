@@ -3,7 +3,7 @@ blockquote {
 	top: -5em;
 	background: #2aa2ff;
 	padding: 0.5em 5em;
-	width: calc(100% - 10em);
+	width: calc(100% - 20em);
 	color: white;
 	z-index: 1;
 	transition: all 0.2s ease-in-out;
