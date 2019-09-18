@@ -7,6 +7,7 @@ blockquote {
 	color: white;
 	z-index: 1;
 	transition: all 0.2s ease-in-out;
+	border-radius: 25px;
 };
 blockquote:hover {
  	top: 0;
