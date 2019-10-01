@@ -5,8 +5,7 @@ Login page
 </title>
 </head>
 <body>
-<h1 style="font-family:Comic Sans Ms;text-align="center";font-size:20pt;
-color:#00FF00;>
+<h1 style="font-family:Comic Sans Ms;text-align='center';font-size:20pt;color:#00FF00;">
 Simple Login Page
 </h1>
 <form name="login">
@@ -15,7 +14,18 @@ Password<input type="password" name="pswrd"/>
 <input type="button" onclick="check(this.form)" value="Login"/>
 <input type="reset" value="Cancel"/>
 </form>
+ <div id="result"></div>
 <script language="javascript">
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  sessionStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
 function check(form)/*function to check userid & password*/
 {
  /*the following code checkes whether the entered userid and password are matching*/
