@@ -16,22 +16,23 @@ Password<input type="password" name="pswrd"/>
 </form>
  <div id="result"></div>
 <script language="javascript">
-// Check browser support
-if (typeof(Storage) !== "undefined") {
-  // Store
-  sessionStorage.setItem("lastname", "Smith");
-  // Retrieve
-  document.getElementById("result").innerHTML = sessionStorage.getItem("lastname");
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-}
 
 function check(form)/*function to check userid & password*/
 {
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
   {
-    window.open('target.html')/*opens the target page while Id & password matches*/
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+    // Store
+    sessionStorage.setItem("username", form.userid.value);
+    sessionStorage.setItem("password", form.pswrd.value);
+    sessionStorage.setItem("logged-in", True);
+    // Retrieve
+    document.getElementById("result").innerHTML = sessionStorage.getItem("logged-in");
+    } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+ }
   }
  else
  {
