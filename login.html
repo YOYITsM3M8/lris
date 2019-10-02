@@ -20,7 +20,7 @@ Password<input type="password" name="pswrd"/>
 function check(form)/*function to check userid & password*/
 {
  /*the following code checkes whether the entered userid and password are matching*/
- if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+ if(form.userid.value == "admin" && form.pswrd.value == "admin")
  {
     sessionStorage.setItem("username", form.userid.value);
     sessionStorage.setItem("password", form.pswrd.value);
