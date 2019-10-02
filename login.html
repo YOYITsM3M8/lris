@@ -21,23 +21,18 @@ function check(form)/*function to check userid & password*/
 {
  /*the following code checkes whether the entered userid and password are matching*/
  if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
-  {
-    // Check browser support
-    if (typeof(Storage) !== "undefined") {
-    // Store
+ {
     sessionStorage.setItem("username", form.userid.value);
     sessionStorage.setItem("password", form.pswrd.value);
     sessionStorage.setItem("logged-in", True);
     // Retrieve
-    document.getElementById("result").innerHTML = sessionStorage.getItem("logged-in");
-    } else {
-    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    window.open("./index.html");
  }
-  }
+ }
  else
  {
    alert("Error Password or Username")/*displays error message*/
-  }
+ }
 }
 </script>
 </body>
